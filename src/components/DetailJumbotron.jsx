@@ -1,7 +1,11 @@
 import { Box, Button, Container, Rating, Typography } from '@mui/material'
 import React from 'react'
+import { useSelector } from 'react-redux'
 
-const DetailJumbotron = ({ detailFilm }) => {
+
+const DetailJumbotron = () => {
+  const detailFilm = useSelector(state => state.films.detail)
+
   return (
     <div>
       <Box sx={{ height: '450px', backgroundImage: `url("https://image.tmdb.org/t/p/w500${detailFilm ? detailFilm.backdrop_path : ''}")`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>

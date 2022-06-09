@@ -3,8 +3,9 @@ import { Box, Container } from '@mui/system'
 import React, { useState, useEffect } from 'react'
 import MainLayout from '../components/MainLayout'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchFilms, fetchDetailFilm } from '../redux/actions/filmActions'
+import { fetchFilms } from '../redux/actions/filmActions'
 import { useNavigate } from 'react-router-dom'
+
 const Home = () => {
   const films = useSelector(state => state.films.films)
   const [page, setPage] = useState(1);
@@ -23,7 +24,6 @@ const Home = () => {
     dispatch(fetchFilms(page))
   }, [page])
 
-  // console.log(films);
   return (
     <MainLayout>
       <Container maxWidth="xl" sx={{ marginTop: 3 }}>
