@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <div className='Footer'>
       <Container sx={{ mt: '20px', color: 'white', py: 2 }} maxWidth="xl">
-        <Grid container columns={15} sx={{ py: 1 }} justifyContent="space-between" direction="row" spacing={10}>
-          <Grid item xs={5}>
+        <Grid container columns={15} sx={{ py: 1 }} justifyContent="space-between" direction="row" spacing={5}>
+          <Grid item xs={15} lg={5}>
             <Typography variant="h5" gutterBottom component="div">
               MilanTV
             </Typography>
@@ -15,7 +15,7 @@ const Footer = () => {
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod deleniti doloremque praesentium maxime at. Rerum, adipisci aliquam reprehenderit accusantium itaque fuga qui laborum dolorem, quidem harum facere atque expedita corrupti esse incidunt consequatur hic explicabo. Quasi fugit dolores, ipsam suscipit doloremque perferendis, eligendi dicta vel soluta amet nostrum quos rerum.
             </Typography>
           </Grid>
-          <Grid item xs={5} sx={{ display: "flex", justifyContent: "end" }}>
+          <Grid item xs={15} lg={5} sx={{ display: "flex", justifyContent: "start" }}>
             <Box>
               <Typography variant="body1" gutterBottom>
                 Tentang Kami
@@ -34,7 +34,7 @@ const Footer = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={5}>
+          <Grid item xs={15} lg={5}>
             <Typography variant="body1" gutterBottom>
               Download
             </Typography>

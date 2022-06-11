@@ -28,7 +28,7 @@ const Home = () => {
     <MainLayout>
       <Container maxWidth="xl" sx={{ marginTop: 3 }}>
         <Typography variant="h5" gutterBottom component="div">Browse a Category</Typography>
-        <Box display='flex' sx={{ gap: 2 }}>
+        <Box display='flex' sx={{ gap: 2, flexWrap: 'wrap' }}>
           <Button variant="outlined">All</Button>
           <Button variant="outlined">Anime</Button>
           <Button variant="outlined">Action</Button>
@@ -38,11 +38,11 @@ const Home = () => {
         </Box>
         <Box className="cards" display='flex' sx={{ flexWrap: 'wrap', marginTop: '20px', gap: '20px' }}>
           {films !== null ? films.results.map(item => (
-            <Card sx={{ maxWidth: 281 }} onClick={() => handleDetail(item.id)}>
+            <Card sx={{ maxWidth: 281, marginX: 'auto' }} onClick={() => handleDetail(item.id)}>
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  height="450"
+                  height="430"
                   image={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
                   alt={`${item.original_title} poster`}
                 />

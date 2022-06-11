@@ -8,8 +8,8 @@ const DetailJumbotron = () => {
 
   return (
     <div>
-      <Box sx={{ height: '450px', backgroundImage: `url("https://image.tmdb.org/t/p/w500${detailFilm ? detailFilm.backdrop_path : ''}")`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
-        <Container maxWidth="xl" sx={{ color: 'white', paddingTop: 10 }}>
+      <Box sx={{ height: '100%', backgroundImage: `url("https://image.tmdb.org/t/p/w500${detailFilm ? detailFilm.backdrop_path : ''}")`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+        <Container maxWidth="xl" sx={{ color: 'white', paddingTop: 10, paddingBottom: 10 }}>
           <Typography variant="h3" gutterBottom component="div">
             {detailFilm ? detailFilm.original_title : 'Loading'}
           </Typography>

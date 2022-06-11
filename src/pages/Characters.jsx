@@ -9,7 +9,7 @@ const Characters = () => {
     <Container maxWidth="xl">
       <Box className="cards" display='flex' sx={{ flexWrap: 'wrap', marginTop: '20px', gap: '20px' }}>
         {creditFilm ? creditFilm.cast.map(item => (
-          <Card sx={{ maxWidth: 281 }} >
+          <Card sx={{ maxWidth: 281, marginX: 'auto' }} >
             <CardActionArea>
               <CardMedia
                 component="img"
